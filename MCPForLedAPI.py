@@ -57,7 +57,30 @@ def handle_intent(intent: str, parameters: dict):
             "calm": "0001",       # blue
             "alert": "1111",      # all
             "focus": "0010",      # green
-            "idle": "0000"        # off
+            "idle": "0000",        # off
+             # Energy levels
+            "energetic": "1100",  # red + yellow (warm, high energy)
+            "relaxed": "0011",    # green + blue (cool, peaceful)
+            "sleepy": "0001",     # blue (same as calm, or could be "0000")
+            
+            # Emotional states
+            "happy": "0110",      # yellow + green (bright, positive)
+            "excited": "1010",    # red + green (festive, christmas-y)
+            "creative": "1001",   # red + blue (purple-ish, artistic)
+            "warning": "1000",    # red only
+            "caution": "0100",    # yellow only
+            
+            # Work modes
+            "busy": "1110",       # all except blue (active but not overwhelming)
+            "thinking": "0011",   # green + blue (cool, contemplative)
+            "success": "0010",    # green (achievement, go)
+            "error": "1000",      # red (problem)
+            
+            # Special
+            "party": "1111",      # all (celebration) TODO: could be dynamic flashing
+            "night": "0001",      # blue (gentle night light)
+            "sunrise": "1100",    # red + yellow (warm awakening)
+            "sunset": "1010"      # red + green (transitional)
         }
         pattern = mood_patterns.get(mood)
         if not pattern:

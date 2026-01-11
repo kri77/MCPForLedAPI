@@ -96,7 +96,7 @@ Arduino LED API (Flask)
 
 ## File Overview
 
-- `mcp_server.py`: Main FastAPI server with intent handling logic
+- `MCPForLedAPI.py`: Main FastAPI server with intent handling logic
 - `requirements.txt`: Python dependencies
 - `README.md`: Project overview and usage
 
